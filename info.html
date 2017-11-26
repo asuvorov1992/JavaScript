@@ -1,0 +1,36 @@
+<head>
+    <script>
+        var checkRepeat=true;
+        var checkFirstTime=true;
+        var verificationScript=false;
+        var temperatureFahrenheit;
+        var temperatureCelsius;
+        while (checkRepeat==true) {
+            if (checkFirstTime==true){
+        var verificationScript=confirm ('Привет, я температурный справочник. Я могу перевести градусы Цельсия в градусы Фаренгейта. Хотите продолжить?');
+            } else {
+              alert ('Продолжим экспериментировать');  
+            }
+            if (verificationScript==true) {
+        var temperatureCelsius=prompt ('Введи значение в градусах цельсиях','');
+            temperatureFahrenheit=(9 / 5) * temperatureCelsius + 32;
+            if (temperatureCelsius!='') {
+        alert (temperatureCelsius+' градусов по Цельсию равняется '+temperatureFahrenheit+' градусов по Фаренгейту!');
+            } 
+            if (temperatureCelsius!='') {
+        checkRepeat=confirm('Вы хотите ввести другое число?');
+                } else {
+                    checkRepeat=false; 
+                }
+        checkFirstTime=false;   
+                } else {
+                   checkRepeat=false; 
+                }
+        }
+        if (checkFirstTime==false) {
+        alert('Надеюсь я оказался полезным тебе! До скорых встреч!');
+        } else {
+            alert('Жаль, что ты так и не воспользовался моими возможностями! Это довольно интересно и занимательно!');
+        }
+    </script>
+</head>
