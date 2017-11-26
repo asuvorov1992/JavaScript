@@ -1,3 +1,0 @@
-print("what1")
-print("what2")
-print("what3")
